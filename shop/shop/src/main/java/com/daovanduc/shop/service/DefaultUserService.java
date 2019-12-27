@@ -1,8 +1,7 @@
 package com.daovanduc.shop.service;
 
 import com.daovanduc.shop.model.UserModel;
-import com.daovanduc.shop.repository.UserDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.daovanduc.shop.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +11,7 @@ import java.util.Optional;
 @Service
 public class DefaultUserService implements UserService {
     @Resource
-    private UserDao userDao;
+    private UserRepository userDao;
 
     @Transactional
     @Override
