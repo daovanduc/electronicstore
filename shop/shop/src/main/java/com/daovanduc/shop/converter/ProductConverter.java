@@ -18,11 +18,10 @@ public class ProductConverter implements Converter<ProductModel, ProductData> {
     public ProductModel convertDataToModel(ProductData var3) {
         ProductModel productModel = new ProductModel();
         productModel.setName(var3.getName());
-        productModel.setId(2);
         productModel.setPrice(var3.getPrice());
         productModel.setImage(var3.getImage());
         productModel.setCatalogID(2);
-        productModel.setCode("513");
+        productModel.setCode(var3.getCode());
         return productModel;
 
     }

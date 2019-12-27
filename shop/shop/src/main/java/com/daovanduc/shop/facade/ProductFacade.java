@@ -1,6 +1,9 @@
 package com.daovanduc.shop.facade;
 
 import com.daovanduc.shop.dto.ProductData;
+import com.daovanduc.shop.model.ProductModel;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -12,4 +15,8 @@ public interface ProductFacade {
     List<ProductData> getAllProducts();
 
     void saveProduct(ProductData productData) throws IOException, SQLException;
+
+    Page<ProductData> findPaginated(int page, int size);
+
+    int getTotalPage();
 }
